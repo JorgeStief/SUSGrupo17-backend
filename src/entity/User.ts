@@ -40,11 +40,9 @@ export class User {
 
     @Column()
     @IsNotEmpty()
-    @Length(4, 100)
     password: string;
 
     @Column({ nullable: true})
-    @Length(4, 100)
     mother: string;
 
     
@@ -56,7 +54,6 @@ export class User {
     address: string
 
     @Column({ nullable: true})
-    @Length(4, 100)
     number: string;
 
     @Column({ nullable: true})

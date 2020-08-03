@@ -43,6 +43,7 @@ static store = async (req: Request, res: Response) => {
   user.mother = mother;
   user.email = email;
   user.cep = cep;
+  user.password = password
   user.address = address;
   user.number = number;
   user.city = city;

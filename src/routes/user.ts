@@ -16,7 +16,7 @@ router.get(
 );
 
 //Create a new user
-router.post("/", [checkJwt], UserController.store);
+router.post("/", UserController.store);
 
 //Edit one user
 router.put(
