@@ -1,7 +1,9 @@
 # SUS BNDES
 
-
-A nice project with a nice description
+Resources:
+- Authentication via JWT
+- Creation of SUS card number automatically in a new registration.
+- Use of DB SqlLite
 
 ---
 ## Requirements
@@ -59,6 +61,6 @@ If you need to update `npm`, you can make it using `npm`! Cool right? After runn
     $ yarn start
 
 ## User for Test
-  login: 11653512779
+  login: 11111111111
   password: admin
 
