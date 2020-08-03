@@ -32,14 +32,22 @@ export class User {
     cpf: string;
 
     @Column()
+    @IsNotEmpty()
+    email: string;
+
+    @Column({ nullable: true})
     susCardNumber: string;
 
     @Column()
+    @IsNotEmpty()
     @Length(4, 100)
     password: string;
 
     @Column({ nullable: true})
-    birthday: string;
+    @Length(4, 100)
+    mother: string;
+
+    
 
     @Column({ nullable: true})
     cep: string
@@ -48,13 +56,17 @@ export class User {
     address: string
 
     @Column({ nullable: true})
+    @Length(4, 100)
+    number: string;
+
+    @Column({ nullable: true})
     neighborhood: string
 
     @Column({ nullable: true})
     city: string
 
     @Column({ nullable: true})
-    state: string
+    uf: string
 
     @Column()
     @IsNotEmpty()

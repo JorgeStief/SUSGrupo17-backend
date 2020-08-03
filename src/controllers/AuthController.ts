@@ -88,5 +88,23 @@ class AuthController {
 
     res.status(204).send();
   };
+
+  static verifyToken = async (req:Request, res:Response) => {
+    
+    try {
+      const token = <string>req.headers["auth"]
+      let { exp } = <any>jwt.decode(token)
+      
+      if (Date.now() >= exp ) {
+        console.log(exp)
+        res.status(200).send({response: false, message:"Sua sessão expirou!"});
+      }
+    } catch (err) {
+      res.status(401).send({response: false, message:"Erro ao verificar o Token!"});;;
+    }
+    res.status(200).send({response: true});
+  }
 }
+
+
 export default AuthController;

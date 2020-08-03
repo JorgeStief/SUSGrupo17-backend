@@ -34,13 +34,20 @@ static show = async (req: Request, res: Response) => {
 
 static store = async (req: Request, res: Response) => {
   //Get parameters from the body
-  let { firstName, lastName, cpf, password, role } = req.body;
+  let { firstName, lastName, cpf, password, mother, email, cep, address, number, city, uf, neighborhood, role } = req.body;
   let user = new User();
   user.firstName = firstName;
   user.lastName = lastName;
   user.cpf = cpf;
-  user.password = password;
   user.role = role;
+  user.mother = mother;
+  user.email = email;
+  user.cep = cep;
+  user.address = address;
+  user.number = number;
+  user.city = city;
+  user.uf = uf;
+  user.neighborhood = neighborhood;
 
   //Validade if the parameters are ok
   const errors = await validate(user);
